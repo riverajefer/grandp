@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 /* Imports*/
 
 @import 'compass';
@@ -11,6 +12,7 @@
 @import 'partials/colors';
 @import 'partials/layout';
 @import 'partials/video_skin';
+
 /* ==========================================================================
 Global Styles
 ========================================================================== */
@@ -138,6 +140,7 @@ textarea {
     background: white;
 }
 
+
 /* ==========================================================================
 Waypoints
 ========================================================================== */
@@ -183,6 +186,7 @@ Waypoints
     visibility: visible;
 }
 
+
 /* ==========================================================================
 Main Nav
 ========================================================================== */
@@ -193,7 +197,7 @@ Main Nav
     .logo {
         display: inline-block;
         width: 120px;
-        padding: 10px 0;
+        padding: 10px 10px;
         text-align: center;
     }
     .primary-nav-wrapper {
@@ -444,6 +448,7 @@ Main Nav
     z-index: 999;
 }
 
+
 /* ==========================================================================
 Header
 ========================================================================== */
@@ -539,6 +544,7 @@ div.mouse {
     }
 }
 
+
 /* ==========================================================================
 Collective
 ========================================================================== */
@@ -554,6 +560,7 @@ Collective
         background-color: $light-grey;
     }
 }
+
 
 /* ==========================================================================
 Stats
@@ -596,6 +603,7 @@ Stats
         text-align: left;
     }
 }
+
 
 /* ==========================================================================
 Crew
@@ -700,6 +708,7 @@ Crew
         right: 0;
     }
 }
+
 
 /* ==========================================================================
 Latest articles
@@ -818,6 +827,7 @@ Latest articles
     }
 }
 
+
 /* ==========================================================================
 Freebies
 ========================================================================== */
@@ -931,43 +941,48 @@ Freebies
     }
 }
 
+
 /* ==========================================================================
-Get started
+CONTACTO
 ========================================================================== */
 
 section.get-started {
     position: relative;
     padding: 90px 0;
-    background-image: -webkit-linear-gradient(225deg, #70f6ea 0%, #51ccdc 100%);
-    background-image: linear-gradient(225deg, #70f6ea 0%, #51ccdc 100%);
-    h2 {
-        font-size: 28px;
-        display: inline-block;
-        margin-right: 30px;
-        vertical-align: middle;
-        color: $white;
-    }
-    a {
-        font-weight: bold;
-        margin-bottom: 5px;
-        -webkit-transition: all 300ms;
-        transition: all 300ms;
-        color: $white;
-        border-bottom: solid 2px rgba($white, .50);
-        &:hover {
-            border-bottom-color: rgba($white, 1);
+    background-image: url("../img/bg_contacto.png");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    form {
+        border: 1px solid #363636;
+        .form-control {
+            background-color: rgba(0, 0, 0, 0);
+            border: 2px solid #363636;
+            border-radius: 0px;
+            color: #111111;
+        }
+        .form-group {
+            padding: 10px;
+            text-align: left;
+        }
+        .header-form {
+            text-align: center;
+            padding: 15px 0px;
+            border-bottom: 2px solid #363636;
+            font-weight: bold;
+        }
+        .form-footer {
+            text-align: center;
+            padding: 15px 0px;
+            button {
+                background-color: #1b3646;
+                width: 200px;
+            }
         }
     }
-    &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: ' ';
-        background-image: url('../img/texture-shapes-bg.png');
-    }
 }
+
 
 /* ==========================================================================
 Footer
@@ -1001,10 +1016,12 @@ footer {
     }
     .footer-nav {
         padding-top: 40px;
-        border-top: solid 1px rgba($white, .15);
+        text-align: center;
         ul.footer-primary-nav {
             display: inline-block;
             margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: solid 1px rgba($white, .15);
             li {
                 display: inline-block;
                 margin-right: 50px;
@@ -1025,12 +1042,14 @@ footer {
             }
         }
         ul.footer-secondary-nav {
+            text-align: center;
             li {
                 color: $dark-grey;
             }
         }
     }
 }
+
 
 /* ==========================================================================
 Share component
@@ -1100,6 +1119,7 @@ Share component
     top: -20px;
     opacity: 1;
 }
+
 
 /* ==========================================================================
 Stroke Gap Icons
@@ -1930,6 +1950,7 @@ Stroke Gap Icons
     content: '\e6c7';
 }
 
+
 /* ==========================================================================
 Responsive Media Queries
 ========================================================================== */
@@ -2087,6 +2108,7 @@ Responsive Media Queries
         float: none;
     }
     footer ul.footer-secondary-nav {
+        text-align: center;
         margin-top: 40px;
     }
     footer ul.footer-secondary-nav li a {
