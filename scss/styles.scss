@@ -2,7 +2,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
 /* Imports*/
 
 @import 'compass';
@@ -12,7 +11,6 @@
 @import 'partials/colors';
 @import 'partials/layout';
 @import 'partials/video_skin';
-
 /* ==========================================================================
 Global Styles
 ========================================================================== */
@@ -140,7 +138,6 @@ textarea {
     background: white;
 }
 
-
 /* ==========================================================================
 Waypoints
 ========================================================================== */
@@ -185,7 +182,6 @@ Waypoints
 .fadeIn {
     visibility: visible;
 }
-
 
 /* ==========================================================================
 Main Nav
@@ -448,7 +444,6 @@ Main Nav
     z-index: 999;
 }
 
-
 /* ==========================================================================
 Header
 ========================================================================== */
@@ -544,7 +539,6 @@ div.mouse {
     }
 }
 
-
 /* ==========================================================================
 Collective
 ========================================================================== */
@@ -560,7 +554,6 @@ Collective
         background-color: $light-grey;
     }
 }
-
 
 /* ==========================================================================
 Stats
@@ -622,7 +615,6 @@ Stats
         }
     }
 }
-
 
 /* ==========================================================================
 Crew
@@ -727,7 +719,6 @@ Crew
         right: 0;
     }
 }
-
 
 /* ==========================================================================
 Latest articles
@@ -846,7 +837,6 @@ Latest articles
     }
 }
 
-
 /* ==========================================================================
 Freebies
 ========================================================================== */
@@ -960,6 +950,68 @@ Freebies
     }
 }
 
+/* ==========================================================================
+    NUESTRO COMPROMISO
+========================================================================== */
+
+.compromiso {
+    .comp-img {
+        width: 330px;
+    }
+    h2 {
+        color: $slate;
+        font-size: $font-size-h2;
+        line-height: 37px;
+        font-weight: $bold;
+        letter-spacing: 6px;
+        padding: 20px 0px;
+    }
+    p {
+        text-align: left;
+    }
+}
+
+/* ==========================================================================
+    NUESTRO END COMPROMISO
+========================================================================== */
+
+/* ==========================================================================
+    LOGRANDO
+========================================================================== */
+
+.logrando {
+    width: 1440px;
+    margin: 50px auto;
+    background: url('../img/lo_estamos_logrando.jpg') no-repeat;
+    background-position: center;
+    background-size: 1200px auto;
+    .box-logrando {
+        padding: 35px 17px;
+        background-color: rgba(168, 215, 201, 0.8);
+        width: 520px;
+        margin-top: 5%;
+        margin-left: 2%;
+        position: relative;
+        .header-box-logrando {
+            h2 {
+                color: $slate;
+                font-size: $font-size-h2;
+                line-height: 37px;
+                font-weight: $bold;
+                letter-spacing: 6px;
+                padding: 20px 0px;
+            }
+            p {
+                font-weight: $light;
+                color: $slate;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+    END LOGRANDO
+========================================================================== */
 
 /* ==========================================================================
     SERVICIOS
@@ -971,27 +1023,41 @@ Freebies
     background-repeat: no-repeat;
     text-align: center;
     /* background-size: cover; */
+    margin: 90px 0px;
     .box-serv {
-        padding: 35px 10px;
+        padding: 35px 17px;
         background-color: #c3e3da;
-        width: 400px;
+        width: 425px;
+        margin: 0 auto;
         h2 {
             color: $slate;
             font-size: $font-size-h2;
             line-height: 37px;
             font-weight: $bold;
             letter-spacing: 6px;
+            padding: 20px 0px;
         }
         p {
             font-weight: $light;
             color: $slate;
         }
+        ul {
+            list-style: disc !important;
+            margin: 10px 0px;
+            li {
+                font-weight: $light;
+                padding: 7px 0px;
+                line-height: 20px;
+            }
+        }
     }
 }
 
 .servicios-op {
+    width: 1440px;
+    margin: 0 auto;
     background: url('../img/serv_opcionales.jpg') no-repeat;
-    background-position: 528px 5px;
+    background-position: 370px 5px;
     background-size: 700px auto;
     .box-serv-op {
         border: 4px solid #1b3646;
@@ -999,6 +1065,7 @@ Freebies
         width: 360px;
         min-height: 330px;
         margin-top: 100px;
+        margin-left: 69%;
         h2 {
             color: $slate;
             font-size: $font-size-h2;
@@ -1018,11 +1085,9 @@ Freebies
     }
 }
 
-
 /* ==========================================================================
     END SERVICIOS
 ========================================================================== */
-
 
 /* ==========================================================================
     INSTALACIONES
@@ -1040,11 +1105,9 @@ Freebies
     }
 }
 
-
 /* ==========================================================================
    END INSTALACIONES
 ========================================================================== */
-
 
 /* ==========================================================================
 CONTACTO
@@ -1088,7 +1151,6 @@ section.get-started {
         }
     }
 }
-
 
 /* ==========================================================================
 Footer
@@ -1155,7 +1217,6 @@ footer {
         }
     }
 }
-
 
 /* ==========================================================================
 Share component
@@ -1226,7 +1287,6 @@ Share component
     opacity: 1;
 }
 
-
 /* ==========================================================================
 Stroke Gap Icons
 ========================================================================== */
@@ -1248,7 +1308,6 @@ Stroke Gap Icons
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 
 /* ==========================================================================
 Responsive Media Queries
