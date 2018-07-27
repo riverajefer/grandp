@@ -6,34 +6,28 @@ require 'phpmailer/PHPMailerAutoload.php'; // clase para envio de correo
 $validator = new GUMP();
 $mail      = new PHPMailer;
 
-
 $_POST = $validator->sanitize($_POST); // You don't have to sanitize, but it's safest to do so.
 
 // Reglas de validación
 $rules = array(
-	'name'     => 'required|max_len,100',
-	'tel'      => 'required|max_len,100',
-	'email'    => 'required|valid_email|max_len,100',
-	'confirm-email'    => 'required|valid_email|max_len,100',
-	'subject'  => 'required|max_len,500',
-	'message'  => 'max_len,500'
+	'nombre'  => 'required|max_len,200',
+	'email'   => 'required|valid_email|max_len,100',
+	'asunto'  => 'required|max_len,500',
+	'mensaje' => 'max_len,500'
 );
-
 
 // filtros 
 $filters = array(
-	'name' 	   => 'trim|sanitize_string',
+	'nombre' 	   => 'trim|sanitize_string',
 	'email'    => 'trim|sanitize_email',	
-	'message'  => 'trim|sanitize_string',
-	'tel'      => 'trim|sanitize_string',
+	'asunto'  => 'trim|sanitize_string',
+	'mensaje'  => 'trim|sanitize_string',
 );
 
 
 $_POST = $validator->filter($_POST, $filters);
 
 $validated = $validator->validate($_POST, $rules);
-
-
 
 // Check if validation was successful
 if($validated === TRUE)
@@ -42,22 +36,20 @@ if($validated === TRUE)
 	$html = '
 	<h2>Contacto totalcareautorepair.com</h2>
 	<ul>
-		<li>Name:     <strong>'.$_POST['name'].'</strong></li>
-		<li>Phone:    <strong>'.$_POST['tel'].'</strong></li>
-		<li>Email:    <strong>'.$_POST['email'].'</strong></li>
-		<li>Subject:  <strong>'.$_POST['subject'].'</strong></li>
-		<li>Message:  <strong>'.$_POST['message'].'</strong></li>
+		<li>Nombre:  <strong>'.$_POST['nombre'].'</strong></li>
+		<li>Email:   <strong>'.$_POST['email'].'</strong></li>
+		<li>Asunto:  <strong>'.$_POST['asunto'].'</strong></li>
+		<li>Mensaje: <strong>'.$_POST['mensaje'].'</strong></li>
 	</ul>
 	<hr>
 	<br>';
 
+	$mail->setFrom($_POST['email'], $_POST['nombre']);
 
-	$mail->setFrom($_POST['email'], $_POST['name']);
+	$mail->addAddress('riverajefer@gmail.com');
+//	$mail->addAddress('riverajefer@gmail.com');
 
-	$mail->addAddress('contact@totalcareautorepair.com');
-	$mail->addAddress('yoana1563@Hotmail.com');
-
-	$mail->Subject = 'Contacto Total Care';
+	$mail->asunto = 'CONTACTO GRAN PAS';
 	$mail->msgHTML($html);
 
 	$mail->CharSet = 'UTF-8';
