@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 /* Imports*/
 
 @import 'compass';
@@ -11,6 +12,7 @@
 @import 'partials/colors';
 @import 'partials/layout';
 @import 'partials/video_skin';
+
 /* ==========================================================================
 Global Styles
 ========================================================================== */
@@ -99,9 +101,9 @@ textarea {
 
 .carousel-cell {
     display: table;
-    width: 100%;
+    width: 90%; // si no mover el logo por porcentaje
     height: calc(100vh - 8.2em);
-    margin-right: 10px;
+    margin: 0px 50px;
     background-position: center;
     background-size: cover;
 }
@@ -130,13 +132,14 @@ textarea {
     height: 12px;
     margin: 0 4px 20px;
     opacity: 1;
-    border: 2px solid white;
+    border: 2px solid $black;
     background: transparent;
 }
 
 .flickity-page-dots .dot.is-selected {
-    background: white;
+    background: $slate;
 }
+
 
 /* ==========================================================================
 Waypoints
@@ -166,8 +169,63 @@ Waypoints
 }
 
 .wp3 {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.wp4 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.wp5 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.wp6 {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.wp7 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.wp8 {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.wp9 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.wp10 {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.wp11 {
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+}
+
+.wp12 {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.wp13 {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+.wp14 {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
 }
 
 .bounceInLeft,
@@ -179,9 +237,12 @@ Waypoints
 .fadeInLeft,
 .fadeInRight,
 .bounceInDown,
+.rotateIn,
+.zoomIn,
 .fadeIn {
     visibility: visible;
 }
+
 
 /* ==========================================================================
 Main Nav
@@ -194,6 +255,7 @@ Main Nav
         display: inline-block;
         width: 120px;
         padding: 10px 10px;
+        margin: 5px 0px 5px 5%;
         text-align: center;
     }
     .primary-nav-wrapper {
@@ -444,6 +506,7 @@ Main Nav
     z-index: 999;
 }
 
+
 /* ==========================================================================
 Header
 ========================================================================== */
@@ -459,27 +522,32 @@ header.hero {
         display: table-cell;
         vertical-align: middle;
         .hero-intro-text {
-            margin-top: 60px;
-            padding-top: 25px;
-            text-align: center;
-            border-top: solid 1px rgba($white, .25);
+            margin-top: 5px;
+            padding-top: 5px;
+            left: 192px;
+            position: relative;
             p {
-                font-weight: $light;
+                font-weight: $normal;
                 margin: 0;
                 padding: 0;
-                color: $white;
+                color: $slate;
+                font-size: 25px;
             }
         }
     }
     h1 {
+        position: relative;
         margin-bottom: 40px;
-        color: $white;
+        margin-top: 185px;
+        color: $slate;
+        font-weight: $bold;
+        left: -3%;
     }
     h3 {
         font-weight: $light;
         margin-bottom: 45px;
         padding: 0 25%;
-        color: $white;
+        color: $slate;
     }
 }
 
@@ -539,6 +607,7 @@ div.mouse {
     }
 }
 
+
 /* ==========================================================================
 Collective
 ========================================================================== */
@@ -554,6 +623,7 @@ Collective
         background-color: $light-grey;
     }
 }
+
 
 /* ==========================================================================
 Stats
@@ -615,6 +685,7 @@ Stats
         }
     }
 }
+
 
 /* ==========================================================================
 Crew
@@ -719,6 +790,7 @@ Crew
         right: 0;
     }
 }
+
 
 /* ==========================================================================
 Latest articles
@@ -837,6 +909,7 @@ Latest articles
     }
 }
 
+
 /* ==========================================================================
 Freebies
 ========================================================================== */
@@ -950,37 +1023,41 @@ Freebies
     }
 }
 
+
 /* ==========================================================================
     NUESTRO COMPROMISO
 ========================================================================== */
 
 .compromiso {
-    .comp-img {
-        width: 330px;
-    }
-    h2 {
-        color: $slate;
-        font-size: $font-size-h2;
-        line-height: 37px;
-        font-weight: $bold;
-        letter-spacing: 6px;
-        padding: 20px 0px;
-    }
-    p {
+    .comp-img {}
+    .comp-text {
         text-align: left;
+        h2 {
+            color: $slate;
+            font-size: $font-size-h2;
+            line-height: 37px;
+            font-weight: $bold;
+            letter-spacing: 6px;
+            padding: 20px 0px;
+        }
+        p {
+            text-align: left;
+        }
     }
 }
+
 
 /* ==========================================================================
     NUESTRO END COMPROMISO
 ========================================================================== */
+
 
 /* ==========================================================================
     LOGRANDO
 ========================================================================== */
 
 .logrando {
-    width: 1440px;
+    width: 1366px;
     margin: 50px auto;
     background: url('../img/lo_estamos_logrando.jpg') no-repeat;
     background-position: center;
@@ -1009,9 +1086,11 @@ Freebies
     }
 }
 
+
 /* ==========================================================================
     END LOGRANDO
 ========================================================================== */
+
 
 /* ==========================================================================
     SERVICIOS
@@ -1054,18 +1133,18 @@ Freebies
 }
 
 .servicios-op {
-    width: 1440px;
+    width: 1366px;
     margin: 0 auto;
     background: url('../img/serv_opcionales.jpg') no-repeat;
-    background-position: 370px 5px;
+    background-position: 242px 5px;
     background-size: 700px auto;
     .box-serv-op {
         border: 4px solid #1b3646;
         padding: 35px 10px 10px 15px;
-        width: 360px;
+        width: 345px;
         min-height: 330px;
         margin-top: 100px;
-        margin-left: 69%;
+        margin-left: 64%;
         h2 {
             color: $slate;
             font-size: $font-size-h2;
@@ -1085,9 +1164,11 @@ Freebies
     }
 }
 
+
 /* ==========================================================================
     END SERVICIOS
 ========================================================================== */
+
 
 /* ==========================================================================
     INSTALACIONES
@@ -1105,9 +1186,11 @@ Freebies
     }
 }
 
+
 /* ==========================================================================
    END INSTALACIONES
 ========================================================================== */
+
 
 /* ==========================================================================
 CONTACTO
@@ -1151,6 +1234,7 @@ section.get-started {
         }
     }
 }
+
 
 /* ==========================================================================
 Footer
@@ -1217,6 +1301,7 @@ footer {
         }
     }
 }
+
 
 /* ==========================================================================
 Share component
@@ -1286,6 +1371,9 @@ Share component
     top: -20px;
     opacity: 1;
 }
+b, strong {
+    font-weight: $bold !important;
+}
 
 /* ==========================================================================
 Stroke Gap Icons
@@ -1308,6 +1396,7 @@ Stroke Gap Icons
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* ==========================================================================
 Responsive Media Queries
@@ -1507,7 +1596,7 @@ Responsive Media Queries
         height: 12px;
         margin: 0 4px;
         opacity: 1;
-        border: 2px solid white;
+        border: 2px solid $black;
         background: transparent;
     }
     div.mouse-container {

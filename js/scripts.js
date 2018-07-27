@@ -7,25 +7,6 @@ $(document).ready(function() {
         $(this).addClass(imgClass);
     });
 
-    /***************** Like Counter ******************/
-
-    $('.count').each(function() {
-        var clicks = Math.floor((Math.random() * 100) + 1);
-        $(this).text(clicks);
-    });
-
-    $(".like_button").one("click", function() {
-        var $count = $(this).parent().find('.count');
-        $count.html($count.html() * 1 + 1);
-        var $icon = $(this).parent().find('.like-counter');
-        $($icon).removeClass("fa-heart-o");
-        $($icon).addClass("fa-heart");
-    });
-
-    $(".like_button").on("click", function() {
-        event.preventDefault();
-    });
-
     /***************** Share Dropdown ******************/
 
     $("li a.share-trigger").on("click", function() {
@@ -144,7 +125,7 @@ $(document).ready(function() {
         offset: '95%'
     });
     $('.wp4').waypoint(function() {
-        $('.wp4').addClass('animated fadeInUp');
+        $('.wp4').addClass('animated fadeIn');
     }, {
         offset: '75%'
     });
@@ -154,17 +135,53 @@ $(document).ready(function() {
         offset: '75%'
     });
     $('.wp6').waypoint(function() {
-        $('.wp6').addClass('animated fadeIn');
+        $('.wp6').addClass('animated fadeInUp');
     }, {
         offset: '75%'
     });
     $('.wp7').waypoint(function() {
-        $('.wp7').addClass('animated fadeIn');
+        $('.wp7').addClass('animated fadeInUp');
     }, {
         offset: '75%'
     });
     $('.wp8').waypoint(function() {
-        $('.wp8').addClass('animated fadeIn');
+        $('.wp8').addClass('animated zoomIn');
+    }, {
+        offset: '75%'
+    });
+
+    $('.wp9').waypoint(function() {
+        $('.wp9').addClass('animated fadeIn');
+    }, {
+        offset: '75%'
+    });
+
+    $('.wp10').waypoint(function() {
+        $('.wp10').addClass('animated fadeInUp');
+    }, {
+        offset: '75%'
+    });
+
+    $('.wp11').waypoint(function() {
+        $('.wp11').addClass('animated zoomIn');
+    }, {
+        offset: '95%'
+    });
+
+    $('.wp12').waypoint(function() {
+        $('.wp12').addClass('animated fadeIn');
+    }, {
+        offset: '95%'
+    });
+
+    $('.wp13').waypoint(function() {
+        $('.wp13').addClass('animated fadeInUp');
+    }, {
+        offset: '95%'
+    });
+
+    $('.wp14').waypoint(function() {
+        $('.wp14').addClass('animated fadeIn');
     }, {
         offset: '75%'
     });
