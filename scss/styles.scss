@@ -2,7 +2,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
 /* Imports*/
 
 @import 'compass';
@@ -12,7 +11,6 @@
 @import 'partials/colors';
 @import 'partials/layout';
 @import 'partials/video_skin';
-
 /* ==========================================================================
 Global Styles
 ========================================================================== */
@@ -140,7 +138,6 @@ textarea {
     background: $slate;
 }
 
-
 /* ==========================================================================
 Waypoints
 ========================================================================== */
@@ -242,7 +239,6 @@ Waypoints
 .fadeIn {
     visibility: visible;
 }
-
 
 /* ==========================================================================
 Main Nav
@@ -391,7 +387,7 @@ Main Nav
     -webkit-transition: all 300ms;
     transition: all 300ms;
     opacity: 0;
-    background-color: $slate;
+    background-color: $white;
     ul.search {
         .is-selected {
             width: 360px;
@@ -450,7 +446,11 @@ Main Nav
     content: '';
     cursor: pointer;
     border-radius: 1px;
-    background: #fff;
+    background: $slate;
+}
+
+a.active span {
+    background: $white;
 }
 
 .nav-toggle span:before {
@@ -498,14 +498,12 @@ Main Nav
     padding: 52px;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
-    background-color: $slate;
 }
 
 .fixed {
     position: fixed;
     z-index: 999;
 }
-
 
 /* ==========================================================================
 Header
@@ -607,7 +605,6 @@ div.mouse {
     }
 }
 
-
 /* ==========================================================================
 Collective
 ========================================================================== */
@@ -623,7 +620,6 @@ Collective
         background-color: $light-grey;
     }
 }
-
 
 /* ==========================================================================
 Stats
@@ -685,7 +681,6 @@ Stats
         }
     }
 }
-
 
 /* ==========================================================================
 Crew
@@ -790,7 +785,6 @@ Crew
         right: 0;
     }
 }
-
 
 /* ==========================================================================
 Latest articles
@@ -909,7 +903,6 @@ Latest articles
     }
 }
 
-
 /* ==========================================================================
 Freebies
 ========================================================================== */
@@ -1023,7 +1016,6 @@ Freebies
     }
 }
 
-
 /* ==========================================================================
     NUESTRO COMPROMISO
 ========================================================================== */
@@ -1046,11 +1038,9 @@ Freebies
     }
 }
 
-
 /* ==========================================================================
     NUESTRO END COMPROMISO
 ========================================================================== */
-
 
 /* ==========================================================================
     LOGRANDO
@@ -1086,11 +1076,9 @@ Freebies
     }
 }
 
-
 /* ==========================================================================
     END LOGRANDO
 ========================================================================== */
-
 
 /* ==========================================================================
     SERVICIOS
@@ -1164,11 +1152,9 @@ Freebies
     }
 }
 
-
 /* ==========================================================================
     END SERVICIOS
 ========================================================================== */
-
 
 /* ==========================================================================
     INSTALACIONES
@@ -1186,11 +1172,9 @@ Freebies
     }
 }
 
-
 /* ==========================================================================
    END INSTALACIONES
 ========================================================================== */
-
 
 /* ==========================================================================
 CONTACTO
@@ -1234,7 +1218,6 @@ section.get-started {
         }
     }
 }
-
 
 /* ==========================================================================
 Footer
@@ -1301,7 +1284,6 @@ footer {
         }
     }
 }
-
 
 /* ==========================================================================
 Share component
@@ -1371,7 +1353,9 @@ Share component
     top: -20px;
     opacity: 1;
 }
-b, strong {
+
+b,
+strong {
     font-weight: $bold !important;
 }
 
@@ -1396,7 +1380,6 @@ Stroke Gap Icons
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 
 /* ==========================================================================
 Responsive Media Queries
@@ -1524,6 +1507,52 @@ Responsive Media Queries
         text-align: left;
         border-right: none;
     }
+    .logrando {
+        width: 100%;
+        margin: 20px auto;
+        background: url('../img/lo_estamos_logrando.jpg') no-repeat;
+        background-position: center;
+        .box-logrando {
+            padding: 35px 17px;
+            background-color: rgba(168, 215, 201, 0.8);
+            width: 80%;
+            margin-top: 5%;
+            margin-left: 2%;
+        }
+    }
+    .servicios {
+        background: url('../img/brochas.jpg') no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        width: 100%;
+        margin: 90px 0px;
+        .box-serv {
+            padding: 35px 17px;
+            background-color: #c3e3da;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .servicios-op {
+        width: 100%;
+        margin: 0 auto;
+        background: url('../img/serv_opcionales.jpg') no-repeat;
+        background-position: center center;
+        .box-serv-op {
+            border: 4px solid #1b3646;
+            padding: 35px 10px 10px 15px;
+            background-color: rgba(168, 215, 201, 0.8);
+            width: 90%;
+            margin: 2%;
+        }
+    }
+    .instalaciones {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
     .stats .stats-container:last-child {
         margin-bottom: 0;
     }
@@ -1605,6 +1634,31 @@ Responsive Media Queries
 }
 
 @media screen and (max-width:640px) {
+    .servicios-op {
+        width: 100%;
+        margin: 0 auto;
+        background: url('../img/serv_opcionales.jpg') no-repeat;
+        background-position: center center;
+        .box-serv-op {
+            border: 4px solid #1b3646;
+            padding: 35px 10px 10px 15px;
+            background-color: rgba(168, 215, 201, 0.8);
+            width: 90%;
+            margin: 2%;
+        }
+    }
+    .logrando {
+        width: 100%;
+        margin: 20px auto;
+        background: url('../img/lo_estamos_logrando.jpg') no-repeat;
+        background-position: center;
+        .box-logrando {
+            padding: 35px 17px;
+            background-color: rgba(168, 215, 201, 0.8);
+            width: 90%;
+            margin: 2%;
+        }
+    }
     .video-js {
         width: 100%;
     }
@@ -1618,12 +1672,17 @@ Responsive Media Queries
         display: none;
     }
     .carousel-cell {
+        width: 100%;
         height: 640px;
         /* height of carousel */
     }
     header.hero h1 {
         font-size: 30px;
         line-height: 40px;
+        left: 1%;
+    }
+    .hero-intro-text p {
+        left: 2%;
     }
     .has-padding {
         padding: 80px 0;
@@ -1648,9 +1707,42 @@ Responsive Media Queries
 }
 
 @media screen and (max-width:480px) {
+    .logrando {
+        width: 100%;
+        margin: 20px auto;
+        background: url('../img/lo_estamos_logrando.jpg') no-repeat;
+        background-position: center;
+        .box-logrando {
+            padding: 35px 17px;
+            background-color: rgba(168, 215, 201, 0.8);
+            width: 80%;
+            margin-top: 5%;
+            margin-left: 2%;
+        }
+    }
+    .servicios {
+        background: url('../img/brochas.jpg') no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        width: 100%;
+        margin: 90px 0px;
+        .box-serv {
+            padding: 35px 17px;
+            background-color: #c3e3da;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .instalaciones {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
     .header-nav-wrapper {
-        border-bottom: solid 5px #7ae2de;
-        background-color: $slate;
+        border-bottom: solid 5px #1f2525;
+        background-color: $white;
     }
     .header-nav-wrapper .logo {
         width: 250px;
@@ -1661,6 +1753,22 @@ Responsive Media Queries
     }
     .header-nav-wrapper .logo {
         border-bottom: none;
+    }
+    .carousel-cell {
+        width: 100%;
+        height: 640px;
+        /* height of carousel */
+    }
+    header.hero h1 {
+        font-size: 30px;
+        line-height: 40px;
+        left: 1%;
+    }
+    header.hero .hero-bg .hero-intro-text {
+        left: 0px;
+        p {
+            left: 0px;
+        }
     }
     .sort h5 {
         display: block;

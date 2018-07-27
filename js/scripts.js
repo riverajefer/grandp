@@ -17,7 +17,7 @@ $(document).ready(function() {
     /***************** Search Component ******************/
 
     $(".show-search").on("click", function() {
-        $(".search-wrapper").addClass("is-visible");
+      //  $(".search-wrapper").addClass("is-visible");
     });
 
     $(".hide-search").on("click", function() {
@@ -193,4 +193,45 @@ $(document).ready(function() {
             $(this).toggleClass('hover');
         });
     }
+
+
+    /***************** ENVIO FORM CONTACT ******************/
+    $('#enviar_btn').show();
+    $('#enviando').hide();
+    $('#enviado_ok').hide();
+    $('#alert_error').hide();
+    
+
+    $('#form-enviar').submit(function(event) {
+        event.preventDefault();
+
+        $('#enviar_btn').hide('slow');
+        $('#enviando').show('slow');
+        $('#enviado_ok').hide('slow');
+
+        var formData = $(this).serializeArray();
+        console.log("formData: ", formData);
+        $.ajax({
+            url:'back/valida.php',
+            method:'POST',
+            data: formData,
+            success:function(data){
+                if(data=='ok'){
+                    $('#enviar_btn').show('slow');
+                    $('#enviado_ok').show('slow');
+                    $('#enviando').hide('slow');
+                    $('#alert_error').hide();
+                    $('#msg_error').empty();
+                }else{
+                    $('#alert_error').show('slow');
+                    $('#msg_error').html(data);
+                    $('#enviar_btn').show('slow');
+                    $('#enviando').hide('slow');                    
+                }
+            }
+        }); 
+
+    });
+
+
 });
